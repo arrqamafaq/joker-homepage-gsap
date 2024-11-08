@@ -17,26 +17,35 @@ timeline.from(".text h1",{
     fontWeight:100,
     stagger:.3,
 });
-timeline.from("#showcase img#even",{
-    x:"-100vw",
-    duration:.5,
-    opacity:0,
-    rotate:360,
-    duration:.4,
-    stagger:.4,
-});
-timeline.from("#showcase img#odd",{
-    x:"100vw",
-    duration:.5,
-    opacity:0,
-    rotate:360,
-    duration:.4,
-    stagger:.4,
-});
-timeline.from("#showcase img#top",{
-    y:"100vh",
+// timeline.from("#showcase img#even",{
+//     x:"-100vw",
+//     duration:.5,
+//     opacity:0,
+//     rotate:360,
+//     duration:.4,
+//     stagger:.4,
+// });
+// timeline.from("#showcase img#odd",{
+//     x:"100vw",
+//     duration:.5,
+//     opacity:0,
+//     rotate:360,
+//     duration:.4,
+//     stagger:.4,
+// });
+// timeline.from("#showcase img#top",{
+//     y:"100vh",
+//     duration:.5,
+//     opacity:0,
+//     rotate:0,
+//     duration:.4,
+// });
+
+timeline.from("#showcase img",{
+    y:(index) => (index%2 === 0) ? "-100%" : "100%",
     duration:.5,
     opacity:0,
     rotate:0,
-    duration:.4,
+    duration:.5,
+    stagger:.3,
 });
