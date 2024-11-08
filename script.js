@@ -17,30 +17,7 @@ timeline.from(".text h1",{
     fontWeight:100,
     stagger:.3,
 });
-// timeline.from("#showcase img#even",{
-//     x:"-100vw",
-//     duration:.5,
-//     opacity:0,
-//     rotate:360,
-//     duration:.4,
-//     stagger:.4,
-// });
-// timeline.from("#showcase img#odd",{
-//     x:"100vw",
-//     duration:.5,
-//     opacity:0,
-//     rotate:360,
-//     duration:.4,
-//     stagger:.4,
-// });
-// timeline.from("#showcase img#top",{
-//     y:"100vh",
-//     duration:.5,
-//     opacity:0,
-//     rotate:0,
-//     duration:.4,
-// });
-
+/*showcase images animation*/
 timeline.from("#showcase img",{
     y:(index) => (index%2 === 0) ? "-100%" : "100%",
     duration:.5,
@@ -49,3 +26,44 @@ timeline.from("#showcase img",{
     duration:.5,
     stagger:.3,
 });
+
+gsap.from("#page1 img", {
+    x:(index) => (index === 0) ? "-170%" : "170%",
+    opacity:0.7,
+
+    scrollTrigger:{
+        trigger:"#page1",
+        scroller:"body",
+        start:"top 10%",
+        end:"bottom top",
+        scrub:1.8,
+        pin:true,
+    }
+})
+gsap.to("#jockerText h1", {
+   transform:"translateX(-60%)",
+    opacity:0.7,
+
+    scrollTrigger:{
+        trigger:"#jockerText",
+        scroller:"body",
+        start:"top 10%",
+        end:"bottom top",
+        scrub:1.8,
+        pin:true,
+    }
+})
+
+gsap.from("#gallery img", {
+    opacity:0.7,
+    x:"-120%",
+    // duration:3,
+    stagger:.3,
+    scrollTrigger:{
+        trigger:"#gallery",
+        scroller:"body",
+        start:"top 10%",
+        end:"bottom top",
+        scrub:1.5,
+    }
+})
