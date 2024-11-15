@@ -60,6 +60,12 @@ timeline.from("#showcase img", {
   duration: 0.5,
   stagger: 0.3,
 });
+timeline.from("#showcase .scrollMessage", {
+  x:-100 ,
+  duration: 1,
+  opacity: 0,
+  delay:2,
+});
 
 gsap.from("#page1 img", {
   x: (index) => (index === 0 ? "-170%" : "170%"),

@@ -31,7 +31,7 @@ a {
 }
 #nav-right {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* width:40%; */
   /* justify-content: space-between; */
   align-items: center;
@@ -50,8 +50,38 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-#shoecase .imageContainer{
+#showcase .scrollMessage {
+  border: 1px solid #858585;
+  border-radius: 50%;
+  padding: 10px 10px;
+  color: #858585;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  overflow: hidden;
+
+}
+#showcase .scrollMessage > p {
+  animation-name: scrollAnime;
+  animation-duration: 1.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: .5s;
+  /* animation-fill-mode: backwards; */
+}
+@keyframes scrollAnime {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+}
+#showcase .imageContainer {
   position: relative;
 }
 #showcase .text {
@@ -86,7 +116,7 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%,50%);
+  transform: translate(-50%, 50%);
   width: 250px;
   height: 400px;
   object-position: top;
@@ -135,4 +165,10 @@ a {
   width: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    height: 100px;
+  }
 }
