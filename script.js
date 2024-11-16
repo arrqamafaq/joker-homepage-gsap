@@ -68,7 +68,7 @@ timeline.from("#showcase .scrollMessage", {
 });
 
 gsap.from("#page1 img", {
-  x: (index) => (index === 0 ? "-170%" : "170%"),
+  x: (index) => (index === 0 ? "-100vw" : "100vw"),
   opacity: 0.7,
 
   scrollTrigger: {
@@ -81,9 +81,9 @@ gsap.from("#page1 img", {
   },
 });
 gsap.to("#jockerText h1", {
-  transform: "translateX(-90%)",
+  transform: "translateX(-100%)",
   opacity: 1,
-  duration:2,
+  duration:1,
   scrollTrigger: {
     trigger: "#jockerText",
     scroller: "#main",
