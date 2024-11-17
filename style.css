@@ -130,14 +130,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 #page1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 #jockerText {
   width: 100vw;
